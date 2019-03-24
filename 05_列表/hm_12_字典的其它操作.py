@@ -1,0 +1,15 @@
+xiaoming_dict = {"name": "小明",
+                 "age": 18}
+
+# 1.统计健值对数量
+print(len(xiaoming_dict))
+# 2.合并字典
+temp_dict = {"height": 1.75,
+             "age": 20}
+# 如果被合并的字典中已经包含存在的健值对，会覆盖原有的健值对
+xiaoming_dict.update(temp_dict)
+print(xiaoming_dict)
+# 3.清空字典
+xiaoming_dict.clear()
+print(xiaoming_dict)
+
