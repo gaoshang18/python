@@ -6,7 +6,6 @@ while True:
     cards_tools.show_menu()
     action_str = input("请选择希望执行的操作：")
     print("你选择的操作是[%s]" % action_str)
-
     # 如果是123 针对名片的操作
     if action_str in ["1","2","3"]:
         # 新增名片
