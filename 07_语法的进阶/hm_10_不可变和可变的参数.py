@@ -1,19 +1,18 @@
-a = 6
-b = 100
-# 解法1： -使用变量
+def demo(num, num_list):
 
-# c = a
-# a = b
-# b = c
+    print("函数内部的代码")
 
-# 解法2: -不使用其它变量
-# a = a + b
-# b = a - b
-# a = a - b
+    # 在函数内部，针对参数使用赋值语句,不会修改到外部的实参变量
+    num = 100
+    num_list = [1, 2, 3]
 
-# 解法3：-python专有解法，利用元组
-# a,b = (b,a)
-# 提示：等号右边的是一个元组，只是把小括号省略了
-a,b = b,a
-print(a)
-print(b)
+    print(num)
+    print(num_list)
+    print("函数执行完成")
+
+
+gl_num = 99
+gl_list = [4, 5, 6]
+demo(gl_num, gl_list)
+print(gl_num)
+print(gl_list)

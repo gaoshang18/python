@@ -1,18 +1,15 @@
-def test(num):
-    print("在函数内部 %d 对应的内存地址是 %d" % (num,id(num)))
+def demo1():
+    num = 1
+    print("在demo1函数内部的变量是 %d" % num)
+    # 定义一个局部变量
+    # 1> 出生：执行了num = 1
+    # 2> 死亡：函数结束
+def demo2():
+    pass
 
-    # 1> 定义一个字符串变量
-    result = "hello"
-    print("函数要返回数据的内存地址是 %d" % id(result))
-    # 2> 将字符串变量返回
-    return result
-# 1.定义一个数字的变量
-a = 10
+    # print("%d " % num)
+# 在函数位置定义的变量，不能在其他位置使用
+# print("%d " % num)
 
-# 数据的地址本质上就是一个数字
-print("a 变量保存的地址是 %d" % id(a))
-# 2.调用 test 函数,本质上传递的是实参保存数据的引用，而不是实参保存的数值
-# 注意：函数有返回值，但是没有定义变量接收
-# 程序不会报错，但是无法获得结果
-r = test(a)
-print("%s 的内存地址是 %d" % (r, id(r)))
+demo1()
+demo2()

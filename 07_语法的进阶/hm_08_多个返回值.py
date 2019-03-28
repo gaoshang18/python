@@ -1,22 +1,32 @@
-# 注意：在开发时，应该把模块中的所有全局变量全局变量
-# 定义在所有函数的上方，就可以保证所有的函数
-# 都能正常的访问到每一个全局变量
-num = 10
-gl_title = "黑马程序员"
-name = "小明"
+def measure():
+    """测量温度和湿度"""
+
+    print("测量开始...")
+    temp = 39
+    wetness = 50
+    print("测量结束...")
+
+    # 元组—可以包含多个数据，因此可以使用元组让函数一次返回多个值
+    # 如果函数返回的类型是元组，小括号可以省略
+    # return (temp, wetness)
+    return temp, wetness
+
+# 元组
 
 
-def demo():
-    # 如果局部变量的名字和全局变量的名字相同
-    # pycharm会在局部变量下方显示一个灰色的虚线
-    num = 99
-    print("%d" % num)
-    print("%s" % gl_title)
-    # print("%s" % name)
+result = measure()
+print(result)
 
-# 在定义一个全局变量
+# 需要单独的处理温度和湿度-不方便
+print(result[0])
+print(result[1])
 
+# 如果函数返回的类型是元组，同时希望单独的处理元组中的元素
+# 可以使用多个变量，一次接受函数的返回结果
+# 注意： 使用多个变量接受结果时，变量的个数应该和元组中的个数保持一致
+gl_temp, gl_wetness = measure()
 
-demo()
+print(gl_temp)
 
-# 在定义一个全局变量
+print(gl_wetness)
+
