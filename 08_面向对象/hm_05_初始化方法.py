@@ -1,34 +1,17 @@
 class Cat:
 
+    def __init__(self):
+
+        print("这是一个初始化方法")
+
+        # self.属性名 = 属性的初始值
+        self.name = "Tom"
+
     def eat(self):
-        # 哪一个对象调用的方法，self就是哪一个对象的引用
         print("%s 爱吃鱼" % self.name)
 
-    def drink(self):
-        print("%s 要喝水" % self.name)
 
-# 创建猫对象
+# 使用类名（）创建对象的时候，会自动调用初始化方法 _init_
 tom = Cat()
-# 可以使用 .属性名  利用赋值语句就可以了
-# tom.name = "Tom"
-tom.eat()
-tom.drink()
-# tom.name = "Tom"
-# 上句代码位置不能正常执行  找不到属性会报错
-print(tom)
-addr = id(tom)
 
-print("%d %x" % (addr, addr))
-
-# 在创建一个猫对象
-
-lazy_cat = Cat()
-
-lazy_cat.name = "懒猫"
-
-lazy_cat.eat()
-lazy_cat.drink()
-print(lazy_cat)
-
-lazy_cat2 = lazy_cat
-print(lazy_cat2)
+print(tom.name)

@@ -9,9 +9,17 @@ class Cat:
 
         print("%s 我去了" % self.name)
 
+    def __str__(self):
+
+        # 必须返回一个字符串
+        return "我是小猫[%s]" % self.name
+
+
 # tom 是一个全局变量
 tom = Cat("Tom")
+print(tom)
 print(tom.name)
 # del 关键字可以删除一个对象
 del tom
 print("__" * 50)
+

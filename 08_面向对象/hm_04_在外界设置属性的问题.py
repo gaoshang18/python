@@ -10,9 +10,11 @@ class Cat:
 # 创建猫对象
 tom = Cat()
 # 可以使用 .属性名  利用赋值语句就可以了
-tom.name = "Tom"
+# tom.name = "Tom"
 tom.eat()
 tom.drink()
+# tom.name = "Tom"
+# 上句代码位置不能正常执行  找不到属性会报错
 print(tom)
 addr = id(tom)
 

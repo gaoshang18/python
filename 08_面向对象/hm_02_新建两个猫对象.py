@@ -15,3 +15,15 @@ print(tom)
 addr = id(tom)
 
 print("%d %x" % (addr, addr))
+
+# 在创建一个猫对象
+
+lazy_cat = Cat()
+
+
+lazy_cat.eat()
+lazy_cat.drink()
+print(lazy_cat)
+
+lazy_cat2 = lazy_cat
+print(lazy_cat2)
