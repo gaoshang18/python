@@ -1,15 +1,10 @@
-def demo(*args, **kwargs):
+def sum_number(num):
 
-    print(args)
-    print(kwargs)
+    print(num)
+    # 递归的出口， 当参数满足某个条件时，不再执行函数
+    if num == 1:
+        return
+    # 自己调用自己
+    sum_number(num - 1)
 
-
-# 元组变量/字典变量
-gl_nums = (1, 2, 3)
-gl_dict = {"name": "小明", "age": 18}
-
-
-demo(gl_nums, gl_dict)
-demo(*gl_nums, **gl_dict)
-
-demo(1, 2, 3, name="小明", age=18)
+sum_number(3)

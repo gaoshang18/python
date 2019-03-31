@@ -1,10 +1,14 @@
-def sum_number(num):
+# 定义一个函数 sum_numbers
+# 能够接受一个sun的整数参数
+# 计算 1 + 2 + ... num 的结果
 
-    print(num)
-    # 递归的出口， 当参数满足某个条件时，不再执行函数
+def sum_numbers(num):
+
     if num == 1:
-        return
-    # 自己调用自己
-    sum_number(num - 1)
+        return 1
+    # 假设 sum_numbers 能够完成 num - 1 的累加
+    temp = sum_numbers(num - 1)
+    return  num + temp
 
-sum_number(3)
+result = sum_numbers(100)
+print(result)

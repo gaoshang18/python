@@ -1,9 +1,16 @@
-def demo(num, *nums, **person):
+def sum_numbers(*args):
+# def sum_numbers(args):
 
-    print(num)
-    print(nums)
-    print(person)
+    num = 0
+
+    print(args)
+    # 循环遍历
+    for n in args:
+        num += n
+
+    return num
 
 
-#demo(1)
-demo(1, 2, 3, 4, 5, name="小明")
+# result = sum_numbers(1, 2, 3, 4, 5)
+result = sum_numbers(1, 2, 3, 4, 5)
+print(result)

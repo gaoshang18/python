@@ -1,16 +1,15 @@
-def sum_numbers(*args):
-# def sum_numbers(args):
-
-    num = 0
+def demo(*args, **kwargs):
 
     print(args)
-    # 循环遍历
-    for n in args:
-        num += n
-
-    return num
+    print(kwargs)
 
 
-# result = sum_numbers(1, 2, 3, 4, 5)
-result = sum_numbers(1, 2, 3, 4, 5)
-print(result)
+# 元组变量/字典变量
+gl_nums = (1, 2, 3)
+gl_dict = {"name": "小明", "age": 18}
+
+
+demo(gl_nums, gl_dict)
+demo(*gl_nums, **gl_dict)
+
+demo(1, 2, 3, name="小明", age=18)

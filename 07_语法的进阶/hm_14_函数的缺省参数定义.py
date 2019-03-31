@@ -1,8 +1,19 @@
-gl_list = [6, 3, 9]
+def print_info(name, gender=True):
+    """
 
-# 默认按照升序排序 - 可能会多
-# gl_list.sort()
-# 如果需要降序排序，需要执行reverse参数
-gl_list.sort(reverse=True)
+    :param name: 班上同学的姓名
+    :param gender: True 男生 False 女生
+    """
+    gender_text = "男生"
 
-print(gl_list)
+    if not gender:
+        gender_text = "女生"
+
+    print("%s 是 %s" % (name, gender_text))
+
+# 假设班上的同学男生居多
+# 提示：在指定缺省参数的默认值时，应该使用最常见的值作为默认值！
+# print_info("小明", True)
+print_info("小明")
+print_info("老王")
+print_info("小美", False)
